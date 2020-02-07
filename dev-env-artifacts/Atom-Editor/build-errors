@@ -1,0 +1,615 @@
+➜  atom git:(master) ./script/bootstrap 
+Node:	v12.11.1
+Npm:	v6.13.1
+Installing script dependencies
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:222:
+In file included from ../node_modules/nan/nan_converters.h:67:
+../node_modules/nan/nan_converters_43_inl.h:22:1: warning: 'ToBoolean' is deprecated: ToBoolean can never throw. Use Local version. [-Wdeprecated-declarations]
+X(Boolean)
+^
+../node_modules/nan/nan_converters_43_inl.h:18:12: note: expanded from macro 'X'
+      val->To ## TYPE(isolate->GetCurrentContext())                            \
+           ^
+<scratch space>:204:1: note: expanded from here
+ToBoolean
+^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2567:3: note: 'ToBoolean' has been explicitly marked deprecated here
+  V8_DEPRECATED("ToBoolean can never throw. Use Local version.",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:222:
+In file included from ../node_modules/nan/nan_converters.h:67:
+../node_modules/nan/nan_converters_43_inl.h:40:1: warning: 'BooleanValue' is deprecated: BooleanValue can never throw. Use Isolate version. [-Wdeprecated-declarations]
+X(bool, Boolean)
+^
+../node_modules/nan/nan_converters_43_inl.h:37:15: note: expanded from macro 'X'
+  return val->NAME ## Value(isolate->GetCurrentContext());                     \
+              ^
+<scratch space>:211:1: note: expanded from here
+BooleanValue
+^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2605:3: note: 'BooleanValue' has been explicitly marked deprecated here
+  V8_DEPRECATED("BooleanValue can never throw. Use Isolate version.",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:223:
+In file included from ../node_modules/nan/nan_new.h:189:
+../node_modules/nan/nan_implementation_12_inl.h:356:37: error: too few arguments to function call, expected 2, have 1
+  return v8::StringObject::New(value).As<v8::StringObject>();
+         ~~~~~~~~~~~~~~~~~~~~~      ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5426:3: note: 'New' declared here
+  static Local<Value> New(Isolate* isolate, Local<String> value);
+  ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:223:
+In file included from ../node_modules/nan/nan_new.h:189:
+../node_modules/nan/nan_implementation_12_inl.h:356:58: error: expected '(' for function-style cast or type construction
+  return v8::StringObject::New(value).As<v8::StringObject>();
+                                         ~~~~~~~~~~~~~~~~^
+../node_modules/nan/nan_implementation_12_inl.h:356:60: error: expected expression
+  return v8::StringObject::New(value).As<v8::StringObject>();
+                                                           ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:2722:
+../node_modules/nan/nan_object_wrap.h:24:25: error: no member named 'IsNearDeath' in 'Nan::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >'
+    assert(persistent().IsNearDeath());
+           ~~~~~~~~~~~~ ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:2722:
+../node_modules/nan/nan_object_wrap.h:127:26: error: no member named 'IsNearDeath' in 'Nan::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >'
+    assert(wrap->handle_.IsNearDeath());
+           ~~~~~~~~~~~~~ ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:16:17: error: no matching member function for call to 'ToObject'
+  return (!obj->ToObject().IsEmpty()
+           ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:17:39: error: no matching member function for call to 'ToObject'
+    && node::Buffer::HasInstance(obj->ToObject()))
+                                 ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:18:33: error: no matching member function for call to 'ToObject'
+    ? node::Buffer::Length(obj->ToObject())
+                           ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:19:12: error: no matching member function for call to 'ToString'
+    : obj->ToString()->Utf8Length();
+      ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2572:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<String> ToString(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2588:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<String> ToString(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:30:62: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    v8::Local<v8::Value> obj = Nan::New<v8::Object>(handle)->Get(Nan::New<v8::String>("obj").ToLocalChecked());
+                                                             ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:5:
+../src/database.h:31:11: warning: 'Set' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    _obj->Set(Nan::New("obj").ToLocalChecked(), obj);
+          ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3402:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:19:17: error: no matching member function for call to 'Has'
+    && options->Has(key)
+       ~~~~~~~~~^~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3494:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context,
+                                    ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3500:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context, uint32_t index);
+                                    ^
+In file included from ../src/batch.cc:8:
+../src/common.h:20:16: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    ? options->Get(key)->BooleanValue()
+               ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:20:26: error: no matching member function for call to 'BooleanValue'
+    ? options->Get(key)->BooleanValue()
+      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2603:8: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+  bool BooleanValue(Isolate* isolate) const;
+       ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2606:51: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+                V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+                                                  ^
+In file included from ../src/batch.cc:8:
+../src/common.h:30:17: error: no matching member function for call to 'Has'
+    && options->Has(key)
+       ~~~~~~~~~^~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3494:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context,
+                                    ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3500:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context, uint32_t index);
+                                    ^
+In file included from ../src/batch.cc:8:
+../src/common.h:31:17: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    && options->Get(key)->IsNumber()
+                ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:32:16: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    ? options->Get(key)->Uint32Value()
+               ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:32:38: error: too few arguments to function call, single argument 'context' was not specified
+    ? options->Get(key)->Uint32Value()
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2611:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:42:67: error: no matching member function for call to 'ToObject'
+  Database* database = Nan::ObjectWrap::Unwrap<Database>(info[0]->ToObject());
+                                                         ~~~~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:72:69: error: too few arguments to function call, single argument 'context' was not specified
+    maybeInstance = Nan::NewInstance(constructorHandle->GetFunction(), 1, argv);
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5995:3: note: 'GetFunction' declared here
+  V8_WARN_UNUSED_RESULT MaybeLocal<Function> GetFunction(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:75:69: error: too few arguments to function call, single argument 'context' was not specified
+    maybeInstance = Nan::NewInstance(constructorHandle->GetFunction(), 2, argv);
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5995:3: note: 'GetFunction' declared here
+  V8_WARN_UNUSED_RESULT MaybeLocal<Function> GetFunction(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:53:21: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+  } else if (!from->ToObject().IsEmpty()                                       \
+              ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:54:42: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+      && node::Buffer::HasInstance(from->ToObject())) {                        \
+                                   ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:55:44: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+    to ## Sz_ = node::Buffer::Length(from->ToObject());                        \
+                                     ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+7 warnings and 20 errors generated.
+make: *** [Release/obj.target/leveldown/src/batch.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:194:23)
+gyp ERR! stack     at ChildProcess.emit (events.js:210:5)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+gyp ERR! System Darwin 19.2.0
+gyp ERR! command "/usr/local/Cellar/node/12.11.1/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Users/brian/dev_space/clojure-org/dev-environment/dev-env-artifacts/Atom-Editor/atom/script/node_modules/leveldown
+gyp ERR! node -v v12.11.1
+gyp ERR! node-gyp -v v5.0.5
+gyp ERR! not ok 
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! leveldown@4.0.2 install: `prebuild-install || node-gyp rebuild`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the leveldown@4.0.2 install script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/brian/.npm/_logs/2019-12-17T06_24_50_784Z-debug.log
+child_process.js:642
+    throw err;
+    ^
+
+Error: Command failed: npm --loglevel=error install
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:222:
+In file included from ../node_modules/nan/nan_converters.h:67:
+../node_modules/nan/nan_converters_43_inl.h:22:1: warning: 'ToBoolean' is deprecated: ToBoolean can never throw. Use Local version. [-Wdeprecated-declarations]
+X(Boolean)
+^
+../node_modules/nan/nan_converters_43_inl.h:18:12: note: expanded from macro 'X'
+      val->To ## TYPE(isolate->GetCurrentContext())                            \
+           ^
+<scratch space>:204:1: note: expanded from here
+ToBoolean
+^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2567:3: note: 'ToBoolean' has been explicitly marked deprecated here
+  V8_DEPRECATED("ToBoolean can never throw. Use Local version.",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:222:
+In file included from ../node_modules/nan/nan_converters.h:67:
+../node_modules/nan/nan_converters_43_inl.h:40:1: warning: 'BooleanValue' is deprecated: BooleanValue can never throw. Use Isolate version. [-Wdeprecated-declarations]
+X(bool, Boolean)
+^
+../node_modules/nan/nan_converters_43_inl.h:37:15: note: expanded from macro 'X'
+  return val->NAME ## Value(isolate->GetCurrentContext());                     \
+              ^
+<scratch space>:211:1: note: expanded from here
+BooleanValue
+^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2605:3: note: 'BooleanValue' has been explicitly marked deprecated here
+  V8_DEPRECATED("BooleanValue can never throw. Use Isolate version.",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:223:
+In file included from ../node_modules/nan/nan_new.h:189:
+../node_modules/nan/nan_implementation_12_inl.h:356:37: error: too few arguments to function call, expected 2, have 1
+  return v8::StringObject::New(value).As<v8::StringObject>();
+         ~~~~~~~~~~~~~~~~~~~~~      ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5426:3: note: 'New' declared here
+  static Local<Value> New(Isolate* isolate, Local<String> value);
+  ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:223:
+In file included from ../node_modules/nan/nan_new.h:189:
+../node_modules/nan/nan_implementation_12_inl.h:356:58: error: expected '(' for function-style cast or type construction
+  return v8::StringObject::New(value).As<v8::StringObject>();
+                                         ~~~~~~~~~~~~~~~~^
+../node_modules/nan/nan_implementation_12_inl.h:356:60: error: expected expression
+  return v8::StringObject::New(value).As<v8::StringObject>();
+                                                           ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:2722:
+../node_modules/nan/nan_object_wrap.h:24:25: error: no member named 'IsNearDeath' in 'Nan::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >'
+    assert(persistent().IsNearDeath());
+           ~~~~~~~~~~~~ ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from ../src/batch.cc:3:
+In file included from ../node_modules/nan/nan.h:2722:
+../node_modules/nan/nan_object_wrap.h:127:26: error: no member named 'IsNearDeath' in 'Nan::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >'
+    assert(wrap->handle_.IsNearDeath());
+           ~~~~~~~~~~~~~ ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:16:17: error: no matching member function for call to 'ToObject'
+  return (!obj->ToObject().IsEmpty()
+           ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:17:39: error: no matching member function for call to 'ToObject'
+    && node::Buffer::HasInstance(obj->ToObject()))
+                                 ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:18:33: error: no matching member function for call to 'ToObject'
+    ? node::Buffer::Length(obj->ToObject())
+                           ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:19:12: error: no matching member function for call to 'ToString'
+    : obj->ToString()->Utf8Length();
+      ~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2572:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<String> ToString(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2588:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<String> ToString(Isolate* isolate) const);
+                              ^
+In file included from ../src/batch.cc:5:
+In file included from ../src/database.h:18:
+../src/leveldown.h:30:62: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    v8::Local<v8::Value> obj = Nan::New<v8::Object>(handle)->Get(Nan::New<v8::String>("obj").ToLocalChecked());
+                                                             ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:5:
+../src/database.h:31:11: warning: 'Set' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    _obj->Set(Nan::New("obj").ToLocalChecked(), obj);
+          ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3402:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version",
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:19:17: error: no matching member function for call to 'Has'
+    && options->Has(key)
+       ~~~~~~~~~^~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3494:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context,
+                                    ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3500:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context, uint32_t index);
+                                    ^
+In file included from ../src/batch.cc:8:
+../src/common.h:20:16: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    ? options->Get(key)->BooleanValue()
+               ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:20:26: error: no matching member function for call to 'BooleanValue'
+    ? options->Get(key)->BooleanValue()
+      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2603:8: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+  bool BooleanValue(Isolate* isolate) const;
+       ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2606:51: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+                V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+                                                  ^
+In file included from ../src/batch.cc:8:
+../src/common.h:30:17: error: no matching member function for call to 'Has'
+    && options->Has(key)
+       ~~~~~~~~~^~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3494:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context,
+                                    ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3500:37: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  V8_WARN_UNUSED_RESULT Maybe<bool> Has(Local<Context> context, uint32_t index);
+                                    ^
+In file included from ../src/batch.cc:8:
+../src/common.h:31:17: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    && options->Get(key)->IsNumber()
+                ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:32:16: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+    ? options->Get(key)->Uint32Value()
+               ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:3457:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATED("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:311:29: note: expanded from macro 'V8_DEPRECATED'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/batch.cc:8:
+../src/common.h:32:38: error: too few arguments to function call, single argument 'context' was not specified
+    ? options->Get(key)->Uint32Value()
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2611:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:42:67: error: no matching member function for call to 'ToObject'
+  Database* database = Nan::ObjectWrap::Unwrap<Database>(info[0]->ToObject());
+                                                         ~~~~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:72:69: error: too few arguments to function call, single argument 'context' was not specified
+    maybeInstance = Nan::NewInstance(constructorHandle->GetFunction(), 1, argv);
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5995:3: note: 'GetFunction' declared here
+  V8_WARN_UNUSED_RESULT MaybeLocal<Function> GetFunction(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:75:69: error: too few arguments to function call, single argument 'context' was not specified
+    maybeInstance = Nan::NewInstance(constructorHandle->GetFunction(), 2, argv);
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:5995:3: note: 'GetFunction' declared here
+  V8_WARN_UNUSED_RESULT MaybeLocal<Function> GetFunction(
+  ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8config.h:351:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:53:21: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+  } else if (!from->ToObject().IsEmpty()                                       \
+              ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:54:42: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+      && node::Buffer::HasInstance(from->ToObject())) {                        \
+                                   ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+../src/batch.cc:91:3: error: no matching member function for call to 'ToObject'
+  LD_STRING_OR_BUFFER_TO_SLICE(key, keyBuffer, key)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/leveldown.h:55:44: note: expanded from macro 'LD_STRING_OR_BUFFER_TO_SLICE'
+    to ## Sz_ = node::Buffer::Length(from->ToObject());                        \
+                                     ~~~~~~^~~~~~~~
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2576:44: note: candidate function not viable: requires single argument 'context', but no arguments were provided
+  V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+                                           ^
+/Users/brian/Library/Caches/node-gyp/12.11.1/include/node/v8.h:2590:31: note: candidate function not viable: requires single argument 'isolate', but no arguments were provided
+                Local<Object> ToObject(Isolate* isolate) const);
+                              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+7 warnings and 20 errors generated.
+make: *** [Release/obj.target/leveldown/src/batch.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:194:23)
+gyp ERR! stack     at ChildProcess.emit (events.js:210:5)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+gyp ERR! System Darwin 19.2.0
+gyp ERR! command "/usr/local/Cellar/node/12.11.1/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Users/brian/dev_space/clojure-org/dev-environment/dev-env-artifacts/Atom-Editor/atom/script/node_modules/leveldown
+gyp ERR! node -v v12.11.1
+gyp ERR! node-gyp -v v5.0.5
+gyp ERR! not ok 
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! leveldown@4.0.2 install: `prebuild-install || node-gyp rebuild`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the leveldown@4.0.2 install script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/brian/.npm/_logs/2019-12-17T06_24_50_784Z-debug.log
+
+    at checkExecSyncError (child_process.js:621:11)
+    at Object.execFileSync (child_process.js:639:15)
+    at module.exports (/Users/brian/dev_space/clojure-org/dev-environment/dev-env-artifacts/Atom-Editor/atom/script/lib/install-script-dependencies.js:9:16)
+    at Object.<anonymous> (/Users/brian/dev_space/clojure-org/dev-environment/dev-env-artifacts/Atom-Editor/atom/script/bootstrap:37:1)
+    at Module._compile (internal/modules/cjs/loader.js:945:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:962:10)
+    at Module.load (internal/modules/cjs/loader.js:798:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:711:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1014:10)
+    at internal/main/run_main_module.js:17:11 {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    <Buffer 0a 3e 20 6c 65 76 65 6c 64 6f 77 6e 40 34 2e 30 2e 32 20 69 6e 73 74 61 6c 6c 20 2f 55 73 65 72 73 2f 62 72 69 61 6e 2f 64 65 76 5f 73 70 61 63 65 2f ... 3666 more bytes>,
+    <Buffer 49 6e 20 66 69 6c 65 20 69 6e 63 6c 75 64 65 64 20 66 72 6f 6d 20 2e 2e 2f 73 72 63 2f 62 61 74 63 68 2e 63 63 3a 33 3a 0a 49 6e 20 66 69 6c 65 20 69 ... 19462 more bytes>
+  ],
+  pid: 11188,
+  stdout: <Buffer 0a 3e 20 6c 65 76 65 6c 64 6f 77 6e 40 34 2e 30 2e 32 20 69 6e 73 74 61 6c 6c 20 2f 55 73 65 72 73 2f 62 72 69 61 6e 2f 64 65 76 5f 73 70 61 63 65 2f ... 3666 more bytes>,
+  stderr: <Buffer 49 6e 20 66 69 6c 65 20 69 6e 63 6c 75 64 65 64 20 66 72 6f 6d 20 2e 2e 2f 73 72 63 2f 62 61 74 63 68 2e 63 63 3a 33 3a 0a 49 6e 20 66 69 6c 65 20 69 ... 19462 more bytes>
+}
